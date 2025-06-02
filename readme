@@ -12,4 +12,8 @@ DeviceEvents
     "SecurityIntelligenceUpdateFailed"
 )
 | project Timestamp, DeviceName, ReportId, ActionType, InitiatingProcessAccountName, InitiatingProcessFileName, AdditionalFields
-💡 Explanation:
+
+
+mhydeath is a Windows kernel exploit-based EDR killer.
+It targets Microsoft Defender for Endpoint (MDE), among others.
+It doesn’t just “stop the Sense service” via user-mode — it disables or blinds the telemetry via kernel manipulation.
